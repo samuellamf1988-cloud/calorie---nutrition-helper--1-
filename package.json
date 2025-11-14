@@ -1,0 +1,13 @@
+{
+  "name": "calorie-nutrition-helper",
+  "version": "1.0.0",
+  "description": "Calculate daily calorie needs and get personalized healthy eating advice using the Gemini API.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "start": "esbuild index.tsx --bundle --outfile=bundle.js --loader:.tsx=tsx --servedir=."
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0"
+  }
+}

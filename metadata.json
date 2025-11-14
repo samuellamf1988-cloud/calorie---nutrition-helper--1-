@@ -1,0 +1,7 @@
+{
+  "name": "Calorie & Nutrition Helper",
+  "description": "Calculate daily calorie needs and get personalized healthy eating advice using the Gemini API.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
