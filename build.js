@@ -23,9 +23,13 @@ async function buildApp() {
     outfile: jsDest,
     loader: { '.tsx': 'tsx' },
     // These are external because they are loaded via importmap in index.html
-    external: ['react', 'react-dom', 'react/*', '@google/genai', 'marked'],
+    external: ['react', 'react-dom/client', 'react/*', '@google/genai', 'marked'],
     format: 'esm', // Ensure ES module output
     sourcemap: true, // For better debugging
+    // Define process.env.API_KEY for browser environment
+    define: {
+      'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+    },
     // minify: true, // Uncomment for production minification
   });
   console.log(`Bundling complete. Output: ${jsDest}`);
